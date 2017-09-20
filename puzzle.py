@@ -1,3 +1,4 @@
+import string
 games = []
 with open("sample.txt","r") as f:
     for line in f.readlines():
@@ -30,7 +31,29 @@ def closest(p1,p2):
 
 print closest(4,4)
 
-alphabet = 
+alphabet = list(string.uppercase)
 
-def lowestABC(p1, p2):
-     
+def lowestletter(p1,p2):
+    print alphabet
+    print "p1: ", p1, "p2: ", p2
+    lowest = alphabet.index("A")
+    print lowest
+    pl1 = alphabet.index(p1)
+    print "pl1: ", pl1
+    pl2 = alphabet.index(p2)
+    print "pl2: ", pl2
+    winner = min(pl1, pl2)
+    print winner
+    if pl1 == pl2:
+        print "draw"
+        return "draw"
+    elif winner == pl1:
+        print "pl1 wins"
+        return "p1"
+    elif winner == pl2:
+        print "pl2 wins"
+        return "p2"
+
+
+lowestletter('A', 'C')
+
