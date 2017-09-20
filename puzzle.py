@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import string
 games = []
 with open("sample.txt","r") as f:
@@ -12,6 +14,24 @@ print p1
 
 print "p2 list:"
 print p2
+
+char = "A"
+num = 2
+
+print num.isdigit()
+
+def getNumSum(list):
+    sum = 0
+    for v in list:
+        print v
+        print v[1]
+        if v[1].isdigit() == True:
+            sum = sum + v[1]
+    return sum
+
+
+print "numsum"
+print getNumSum(['bA','r6','y1'])
 
 
 def closest(p1,p2):
